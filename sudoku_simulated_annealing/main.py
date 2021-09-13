@@ -1,5 +1,5 @@
 """
-Parts of this code is from @kushagra77 on github
+Parts of this code is from @kushagra77 and @rohitash-chandra on github
 """
 
 
