@@ -1,4 +1,3 @@
-import random
 from algos import randomswap, correctness, score1d
 from numpy import exp
 from numpy.random import rand
@@ -11,9 +10,12 @@ def solve(empty_array, array):
 
     best = correctness(array)
     curr = best
+    counter = 0
 
     for i in range(n_iterations):
         if best == 0:
+            break
+        if counter > 1000:
             break
         temp_array = array.copy()
         randomswap(empty_array, temp_array)
@@ -24,6 +26,7 @@ def solve(empty_array, array):
             print('correctness has increased from {} to {}'.format(best, candidate))
 
             best = candidate
+            counter += 1
 
         diff = candidate - curr
 
